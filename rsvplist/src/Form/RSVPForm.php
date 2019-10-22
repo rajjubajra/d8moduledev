@@ -26,7 +26,7 @@ class RSVPForm extends FormBase{
   /**
    * (@inheritdoc)
    */
-  public function buildForm(array $from, FormStateInterface $form_state){
+  public function buildForm(array $form, FormStateInterface $form_state){
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid>value;
     $form['email'] = array(
