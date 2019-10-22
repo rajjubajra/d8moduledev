@@ -8,7 +8,7 @@ namespace Drupal\rsvplist\Form;
 
 use Drupal\Core\Database\Database;
 use Drupal\Core\Form\FormBase;
-use Drupal\Core\Form\FormStateInterfacr;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Provides an RSVP email form
@@ -26,7 +26,7 @@ class RSVPForm extends FormBase{
   /**
    * (@inheritdoc)
    */
-  public function buildForm(array $from, FormStateInterfacr $form_state){
+  public function buildForm(array $from, FormStateInterface $form_state){
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid>value;
     $form['email'] = array(
@@ -52,7 +52,7 @@ class RSVPForm extends FormBase{
   /**
    * (@inheritdoc)
    */
-  public function submitForm(array &$form, FormStateInterfacr $form_state){
+  public function submitForm(array &$form, FormStateInterface $form_state){
     drupal_set_message(t('The form is working'));
   }
 
