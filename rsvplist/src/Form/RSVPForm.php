@@ -28,7 +28,7 @@ class RSVPForm extends FormBase{
    */
   public function buildForm(array $form, FormStateInterface $form_state){
     $node = \Drupal::routeMatch()->getParamter('node');
-    $nid = $node->nid>value;
+    $nid = $node->nid->value;
     $form['email'] = array(
       '#title'=> t('Email Address'),
       '#type' => 'textfield',
