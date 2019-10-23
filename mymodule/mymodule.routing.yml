@@ -4,4 +4,4 @@ mymodule.content:
     _controller: '\Drupal\mymodule\Controller\FirstController::content'
     _title: 'My first page and menu item'
   requirements:
-    _permission: 'access_content'
+    _permission: 'access content'
