@@ -7,4 +7,4 @@ access rsvplist report:
 administer rsvplist:
   title: 'Administer rsvplist settings'
   description: 'Access the RSVP administrative settings page.'
-  restricted access: TRUE
+  restricted access: true
