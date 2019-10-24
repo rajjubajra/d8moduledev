@@ -2,7 +2,7 @@
 function rsvplist_schema(){
   $schema['rsvplist'] = array(
     'description' => 'store email, timestapm, nid, and uid for an rsvp',
-        'field' => array(
+        'fields' => array(
             'id' => array(
               'description' => 'primary array for the rocord',
               'type' => 'serial',
@@ -19,15 +19,15 @@ function rsvplist_schema(){
               'description' => 'The {node} .id for this rsvp',
               'type' => 'varchar',
               'length' => 64,
-              'not null' => FASLS,
+              'not null' => FALSE,
               'default' => 0,
             ),
             'mail' => array(
-              'descriptioin' => 'User\'s email address.',
+              'description' => 'User\'s email address.',
               'type' => 'varchar',
               'not null' => 'varchar',
               'length' => 64,
-              'not null' => FASLE,
+              'not null' => FALSE,
               'default' => ''
             ),
             'created' => array(
@@ -43,10 +43,10 @@ function rsvplist_schema(){
           'node user' => array('nid', 'uid'),
         )
     );
-  $schema['rsvplist_enabled'] = array(
-    'descriptioin' => 'Track whether rsvp is enable for a node.',
-    'field' => array(
-        'nid' => array(
+  $schema['rsvplist_enabled'] = array( 
+    'description' => 'Track whether rsvp is enable for a node.',
+    'fields' => array(
+          'nid' => array(
           'description' => 'The {node} .nid that has rsvplist enabled.',
           'type' => 'int',
           'not null' => TRUE,
