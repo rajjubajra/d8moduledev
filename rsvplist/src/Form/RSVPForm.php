@@ -67,8 +67,8 @@ class RSVPForm extends FormBase{
       array(
         'mail' => $form_state->getValue('email'),
         'nid'  => $form_state->getValue('nid'),
-        'uid'  => $user,
-        'created' => time()
+        'uid'  => $user->id(),
+        'created' => time(),
       )
     )
     ->execute();
