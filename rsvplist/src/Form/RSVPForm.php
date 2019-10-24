@@ -62,7 +62,7 @@ class RSVPForm extends FormBase{
     * (@inheritdoc)
     */
   public function submitForm(array &$form, FormStateInterface $form_state){
-    $user = \Drupal\user\entity\User::load(\Drupal::currentUser()->id());
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
     db_insert('rsvplist')->fields(
       array(
         'mail' => $form_state->getValue('email'),
