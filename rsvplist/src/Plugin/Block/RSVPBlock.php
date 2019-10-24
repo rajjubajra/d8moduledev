@@ -11,9 +11,9 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Provides and RSVP list block
+ * Provides and 'RSVP' list block
  * @Block(
- *  id = "rsvp_block"
+ *  id = "rsvp_block",
  *  admin_label = @Translation("RSVP Block"),
  * )
  */
@@ -25,7 +25,7 @@ class RSVPBlock extends BlockBase{
   public function build()
   {
     return array(
-      '#markup' => $this->t('RSVP List Block'),
+      '#markup' => $this->t('RSVP List Block')
     );
   }
 }
