@@ -15,44 +15,50 @@ use Drupal\Core\Form\FormStateInterface;
   */
 
 class RSVPForm extends FormBase{
+  public function content(){
+    return array(
+      '#type' => 'markup',
+      '#markup' => t('This is email form page')
+    );
+  }
   /**
     * (@inheritdoc)
     */
-  public function getFormId(){
-    //unique id of the form
-    return 'rsvplist_email_form';
-  }
+  // public function getFormId(){
+  //   //unique id of the form
+  //   return 'rsvplist_email_form';
+  // }
 
   /**
     * (@inheritdoc)
     */
-  public function buildForm(array $form, FormStateInterface $form_state){
-    $node = \Drupal::routeMatch()->getParameter('node');
-    $nid = $node->nid->value;
-    $form['email'] = array(
-      '#title'=> t('Email Address'),
-      '#type' => 'textfield',
-      '#size' => 25,
-      'description' => t('We will send update to the email address you provide'),
-      'require' => true,
-    ); 
-    //submit button
-    $form['submit'] = array(
-      '#type' => 'submit',
-      '#value' => t('RSVP'),
-    );
-    //node id in hidden field
-    $form['nid'] = array(
-      '#type' => hidden,
-      '#value' => $nid
-    );
-    return $form;
-  }
+  // public function buildForm(array $form, FormStateInterface $form_state){
+  //   $node = \Drupal::routeMatch()->getParameter('node');
+  //   $nid = $node->nid->value;
+  //   $form['email'] = array(
+  //     '#title'=> t('Email Address'),
+  //     '#type' => 'textfield',
+  //     '#size' => 25,
+  //     'description' => t('We will send update to the email address you provide'),
+  //     'require' => true,
+  //   ); 
+  //   //submit button
+  //   $form['submit'] = array(
+  //     '#type' => 'submit',
+  //     '#value' => t('RSVP'),
+  //   );
+  //   //node id in hidden field
+  //   $form['nid'] = array(
+  //     '#type' => hidden,
+  //     '#value' => $nid
+  //   );
+  //   return $form;
+  // }
   
   /**
     * (@inheritdoc)
     */
-  public function submitForm(array &$form, FormStateInterface $form_state){
-    drupal_set_message(t('The form is working'));
-  }
+  // public function submitForm(array &$form, FormStateInterface $form_state){
+  //   drupal_set_message(t('The form is working'));
+  // }
 }
