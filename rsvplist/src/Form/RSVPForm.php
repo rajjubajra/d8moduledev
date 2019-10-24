@@ -52,10 +52,10 @@ class RSVPForm extends FormBase{
   /**
     * (@inheritdoc)
     */
-  public function validateForm(array $form, FormStateInterface $form_state){
+  public function validateForm(array &$form, FormStateInterface $form_state){
     $value = $form_state->getValue('email');
     if($value == !\Drupal::service('email_validator')->isValid($value)){
-      $form_state->setErrorByName('email',t('Email address %mail is not valid.', array('%mail'=>$value)));
+      $form_state->setErrorByName('email', t('Email address %mail is not valid.', array ('%mail'=>$value)));
     }
   }
   /**
