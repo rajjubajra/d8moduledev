@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contents /Drupal/rsvplist/Form/RSVPSettingsForm
+ * Contents \Drupal\rsvplist\Form\RSVPSettingsForm
  */
 namespace Drupal\rsvplist\Form;
 
