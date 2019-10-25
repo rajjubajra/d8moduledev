@@ -5,9 +5,9 @@
  */
 namespace Drupal\rsvplist\Form;
 
-use \Drupal\Core\Form\ConfigFormBase;
-use \Symfony\Component\HttpFoundation\Request;
-use \Drupal\Core\FormStateInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Symfony\Component\HttpFoundation\Request;
+use Drupal\Core\FormStateInterface;
 
 /**
  * Define a form for config RSVP list module settings
