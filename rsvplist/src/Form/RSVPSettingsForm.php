@@ -6,7 +6,7 @@
 namespace Drupal\rsvplist\Form;
 
 use \Drupal\Core\Form\ConfigFormBase;
-use \Symphony\Component\HttpFoundation\Request;
+use \Symfony\Component\HttpFoundation\Request;
 use \Drupal\Core\FormStateInterface;
 
 /**
@@ -32,7 +32,7 @@ class RSVPSettingsForm extends ConfigFormBase{
   public function buildForm(array $form, FormStateInterface $form_state, Request $request = NULL ){
     $types = node_type_get_names();
     $config = $this->config('rsvplist.settings');
-    $form = ['rsvplist_type'] = array(
+    $form = ['rsvplist_types'] = array(
       '#type'  => 'checkboxes',
       '#title' => $this->t('the content types to enable RSVP collection for'),
       '#default_value' => $config->get('allowed_types'),
