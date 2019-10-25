@@ -39,6 +39,8 @@ class RSVPSettingsForm extends ConfigFormBase{
       '#options' => $types,
       '#description' => t('On the specific node types, an RSVP option will be available and can be enabled while that node is being edited'),
     );
+    $form['array_filter'] = array('#type' => 'type', '#value' => true);
+    return parent::buildForm($form, $form_state);
   }
   /**
    * {@inheritdoc}
@@ -50,14 +52,3 @@ class RSVPSettingsForm extends ConfigFormBase{
     parent::submitForm($form, $form_state);
   }
 }
-
-
-// $form = ['rsvplist_types'] = array(
-//   '#type'  => 'checkboxes',
-//   '#title' => $this->t('the content types to enable RSVP collection for'),
-//   '#default_value' => $config->get('allowed_types'),
-//   '#options' => $types,
-//   '#description' => t('On the specific node type, an RSVP option will be available and can be enabled while that node being edited.'),
-// );
-// $form['array_filter'] = array('#type' => 'value', '#value' => TRUE);
-// return parent::buildForm($form, $form_state);
