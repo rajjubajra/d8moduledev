@@ -9,7 +9,7 @@ rsvplist.form:
 rsvplist.admin_settings:
   path: '/admin/config/content/rsvplist'
   defaults:
-    _form: '\Drupal\rsvplist\From\RSVPSettingsForm'
+    _form: '\Drupal\rsvplist\Form\RSVPSettingsForm'
     _title: 'RSVP List Settings'
   requirements:
     _permission: 'administer rsvplist'
