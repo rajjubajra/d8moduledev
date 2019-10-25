@@ -5,3 +5,10 @@ rsvplist.form:
     _title: 'RSVP to this Event'
   requirements:
     _permission: 'view rsvplist'
+rsvplist.admin_settings:
+  path: '/admin/config/content/rsvplist'
+  default:
+    _form: '\Drupal\rsvplist\From\RSVPSettingsForm'
+    _title: 'RSVP List Settings'
+  requirements:
+    _permission: 'administer rsvplist'
