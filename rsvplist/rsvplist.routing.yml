@@ -12,4 +12,4 @@ rsvplist.admin_settings:
     _form: '\Drupal\rsvplist\Form\RSVPSettingsForm'
     _title: 'RSVP List Settings'
   requirements:
-    _permission: 'administer rsvplist'
+    _permission: 'administer rsvplist' 

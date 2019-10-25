@@ -2,5 +2,5 @@ rsvplist.admin_settings:
   title: 'RSVP List Settings'
   description: 'Control the display of RSVP From'
   route_name: rsvplist.admin_settings
-  parent: system_admin_config_content
+  parent: system.admin_config_content
   weight: 10
