@@ -18,9 +18,10 @@ class EnablerService{
    */
   public function __construct()
   {
-    
+    $this->SetEnabled;
+    $this->isEnabled;
+    $this->delEabled;
   }
-
   /**
    * set the individual node to be RSVP enabled
    * 
@@ -29,7 +30,7 @@ class EnablerService{
   public function SetEnabled(Node $node){
     if(!$this->isEnabled($node)){
       $insert = Database::getConnection()->insert('rsvplist_enabled');
-      $insert->field(array('nid'), array($node->id()));
+      $insert->fields(array('nid'), array($node->id()));
       $insert->execute();
     }
   }

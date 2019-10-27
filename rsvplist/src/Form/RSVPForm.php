@@ -58,6 +58,7 @@ class RSVPForm extends FormBase{
       $form_state->setErrorByName('email', t('Email address %mail is not valid.', array ('%mail'=>$value)));
       return;
     }
+    //check the same email alread exits 
     $node = \Drupal::routeMatch()->getParameter('node');
     //check email already set for this node
     $select = Database::getConnection()->selecct('rsvplist','r');
