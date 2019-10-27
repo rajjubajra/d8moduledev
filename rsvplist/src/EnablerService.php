@@ -16,12 +16,12 @@ class EnablerService{
   /**
    * Constructor
    */
-  public function __construct()
-  {
-    $this->SetEnabled;
-    $this->isEnabled;
-    $this->delEabled;
-  }
+  // public function __construct()
+  // {
+
+  // }
+    
+  
   /**
    * set the individual node to be RSVP enabled
    * 
@@ -63,5 +63,6 @@ class EnablerService{
     $delete->condition('nid', $node->id());
     $delete->exeucte();
   }
+  
 
 }
