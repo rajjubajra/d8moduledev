@@ -16,12 +16,13 @@ class EnablerService{
   /**
    * Constructor
    */
-  // public function __construct()
-  // {
+  public function __construct()
+  {
+      $this->SetEnabled(\Drupal\node\Entity\Node);
+      $this->isEnabled(\Drupal\node\Entity\Node);
+      $this->delEabled(\Drupal\node\Entity\Node);
 
-  // }
-    
-  
+  }
   /**
    * set the individual node to be RSVP enabled
    * 
