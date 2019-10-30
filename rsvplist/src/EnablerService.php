@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains Drupal\rsvplist\EablerService
+ * Contains Drupal\rsvplist\EnablerService
  */
 
 namespace Drupal\rsvilsit;
