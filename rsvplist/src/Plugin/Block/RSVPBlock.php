@@ -32,7 +32,7 @@ class RSVPBlock extends BlockBase{
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid->value;
     /** @var \Drupal\rsvplist\EnablerSerice $enabler */
-    $enabler = \Ddrupal::service('rsvplist.enabler');
+    $enabler = \Drupal::service('rsvplist.enabler');
     if(is_numeric($nid)){
       if($enabler->isEnabled($node)){
         return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
