@@ -18,9 +18,7 @@ class EnablerService{
    */
   public function __construct()
   {
-      $this->setEnabled(\Drupal\node\Entity\Node);
-      $this->isEnabled(\Drupal\node\Entity\Node);
-      $this->delEabled(\Drupal\node\Entity\Node);
+  
   }
   
   /**
