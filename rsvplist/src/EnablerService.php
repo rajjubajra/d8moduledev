@@ -18,17 +18,17 @@ class EnablerService{
    */
   public function __construct()
   {
-      // $this->SetEnabled(\Drupal\node\Entity\Node);
-      // $this->isEnabled(\Drupal\node\Entity\Node);
-      // $this->delEabled(\Drupal\node\Entity\Node);
-
+      $this->setEnabled(\Drupal\node\Entity\Node);
+      $this->isEnabled(\Drupal\node\Entity\Node);
+      $this->delEabled(\Drupal\node\Entity\Node);
+  }
   
   /**
    * set the individual node to be RSVP enabled
    * 
    * @param \Drupal\node\Entity\Node $node
    */ 
-  public function SetEnabled(Node $node){
+  public function setEnabled(Node $node){
     if(!$this->isEnabled($node)){
       $insert = Database::getConnection()->insert('rsvplist_enabled');
       $insert->fields(array('nid'), array($node->id()));
