@@ -28,11 +28,15 @@ class RSVPBlock extends BlockBase{
   }
 
   public function blockAccess(AccountInterface $account){
-    /** Drupal\node\Entity\Node $node */
+    /** @var \Drupal\node\Entity\Node $node */
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid->value;
+    /** @var \Drupal\rsvplist\EnablerSerice $enabler */
+    $enabler = \Ddrupal::service('rsvplist.enabler');
     if(is_numeric($nid)){
-      return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+      if($enabler->isEnabled($node)){
+        return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+      }
     }
     return AccessResult::forbidden();
   }
