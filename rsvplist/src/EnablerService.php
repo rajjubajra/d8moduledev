@@ -4,7 +4,7 @@
  * Contains Drupal\rsvplist\EnablerService
  */
 
-namespace Drupal\rsvilsit;
+namespace Drupal\rsvplist;
 
 use Drupal\Core\Database\Database;
 use Drupal\node\Entity\Node;
