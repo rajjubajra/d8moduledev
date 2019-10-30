@@ -24,7 +24,7 @@ function rsvplist_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
     $form['rsvplist'] = array(
         '#type' => 'checkbox',
         '#title' => t('Collect RSVP email address for this node'),
-        '#default_value' => $enabler->isEnable($node)
+        '#default_value' => $enabler->isEnabled($node)
     );
     foreach(array_keys($form['actions']) as $action){
       if($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit'){
