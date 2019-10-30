@@ -31,6 +31,7 @@ class RSVPBlock extends BlockBase{
     /** @var \Drupal\node\Entity\Node $node */
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid->value;
+    var_dump($nid);
     /** @var \Drupal\rsvplist\EnablerSerice $enabler */
     $enabler = \Drupal::service('rsvplist.enabler');
     if(is_numeric($nid)){
